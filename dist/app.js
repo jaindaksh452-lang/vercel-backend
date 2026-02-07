@@ -29,9 +29,11 @@ app.get('/health', (req, res) => {
 const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 const eventRoutes_1 = __importDefault(require("./routes/eventRoutes"));
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
+const analysisRoutes_1 = __importDefault(require("./routes/analysisRoutes"));
 app.use('/api/auth', authRoutes_1.default);
 app.use('/api/events', eventRoutes_1.default);
 app.use('/api/dashboard', dashboardRoutes_1.default);
+app.use('/api/analysis', analysisRoutes_1.default);
 // Error Handling
 app.use((err, req, res, next) => {
     console.error(err.stack);
